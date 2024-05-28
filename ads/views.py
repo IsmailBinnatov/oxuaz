@@ -12,4 +12,6 @@ def index(request):
 
 
 def indexFeed(request, id):
-    return render(request, 'ads/detail.html')
+    feed = Feed.objects.get(id=id)
+    context = {'feed': feed}
+    return render(request, 'ads/detail.html', context)
