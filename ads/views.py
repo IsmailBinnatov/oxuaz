@@ -9,3 +9,7 @@ def index(request):
     feeds = Feed.objects.all()
     context = {'feeds': feeds}
     return render(request, 'ads/index.html', context)
+
+
+def indexFeed(request, id):
+    return render(request, 'ads/detail.html')
