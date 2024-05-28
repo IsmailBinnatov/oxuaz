@@ -1,0 +1,136 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container for centering content */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header styling */
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 1em 0;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+header nav {
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #ffeb3b;
+}
+
+/* Main content styling */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+}
+
+/* Product detail styling */
+.product-detail {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+}
+
+.product-info h2 {
+    margin: 15px 0;
+    color: #4CAF50;
+}
+
+.product-info p {
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Footer styling */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: auto;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .product-detail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-info {
+        text-align: center;
+    }
+}

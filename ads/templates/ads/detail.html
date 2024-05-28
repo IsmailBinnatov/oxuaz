@@ -4,37 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ news.title }}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{{ product.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/detail.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>{{ news.title }}</h1>
+            <h1>{{ feed.title }}</h1>
             <nav>
                 <ul>
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="#">World</a></li>
-                    <li><a href="#">Politics</a></li>
-                    <li><a href="#">Business</a></li>
-                    <li><a href="#">Technology</a></li>
-                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
         <div class="container">
-            <article class="news-detail">
-                <img src="{{ news.image_url }}" alt="{{ news.title }}">
-                <p>{{ news.content }}</p>
-            </article>
+            <div class="product-detail">
+                <div class="product-image">
+                    <img src="{{ feed.image_url }}" alt="{{ feed.title }}">
+                </div>
+                <div class="product-info">
+                    <h2>{{ feed.title }}</h2>
+                    <p>{{ feed.description }}</p>
+                    <br>
+                    <p class="product-price">{{ feed.created_at }}</p>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
         <div class="container">
-            <p>&copy; 2024 News Site</p>
+            <p>&copy; 2024 My E-commerce Site</p>
         </div>
     </footer>
 </body>
