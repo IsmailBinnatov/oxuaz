@@ -31,7 +31,9 @@
 
                 <article class="news-item">
                     <img src="https://via.placeholder.com/800x400" alt="News Image 1">
-                    <h2>{{ feed.id }}: {{ feed.title }}</h2>
+                    <a href="{{ feed.id }}/">
+                        <h2>{{ feed.id }}: {{ feed.title }}</h2>
+                    </a>
                     <p>{{ feed.description }}</p>
                     <br>
                     <p>{{ feed.created_at }}</p>
