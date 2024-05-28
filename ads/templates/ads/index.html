@@ -27,12 +27,15 @@
     <main>
         <div class="container">
             <div class="news-container">
+                {% for feed in feeds %}
+
                 <article class="news-item">
                     <img src="https://via.placeholder.com/800x400" alt="News Image 1">
-                    <h2>News Title 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h2>{{ feed.title }}</h2>
+                    <p>{{ feed.description }}</p>
                 </article>
-                <!-- Добавьте больше новостей, если нужно -->
+
+                {% endfor %}
             </div>
         </div>
     </main>
